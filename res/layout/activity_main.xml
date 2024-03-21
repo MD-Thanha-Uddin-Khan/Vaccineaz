@@ -1,0 +1,3935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:padding="12dp"
+        android:text="Log Out"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonPrint"
+        android:padding="12dp"
+        android:text="Print"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintStart_toEndOf="@+id/enter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logout"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/table_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Monthly Vaccine Report"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toStartOf="@+id/logout"
+                    app:layout_constraintStart_toEndOf="@+id/enter"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="S.L."
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Name"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Prv. Month Doses"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Receive Doses"
+                        tools:ignore="HardcodedText" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Total Doses"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Accumulated"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Govt. Doses"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Non Govt. Doses"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Total Doses"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Price TK"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Month Total TK"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Accumulated Doses"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Accumulated TK"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Balance Doses"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="1"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="2"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="3"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="4"
+                        tools:ignore="HardcodedText" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="5"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="6"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="7"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="8"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="9"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="10"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="11"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="12"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="13"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="14"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Poultry"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="01"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="BCRDV"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="02"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="RDV"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_2"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_2"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_2"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_2"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="03"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="PG POX"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_3"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_3"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_3"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_3"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="04"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="FL POX"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_4"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_4"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_4"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_4"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="05"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="MAREX"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_5"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_5"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_5"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_5"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="06"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="GUMBORO"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_6"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_6"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_6"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_6"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="07"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="FL CHOLERA"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_7"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_7"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_7"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_7"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="08"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="SULMONELA"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_8"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_8"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_8"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_8"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="09"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="DP"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_9"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_9"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_9"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_9"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="A"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="SUB TOTAL"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/b_10"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/e_10"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/f_10"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/i_10"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="Cattle"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="01"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="ANTRAX"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b1"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e1"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f1"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i1"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="02"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="B.Q"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_21"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_21"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_21"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_21"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="03"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="H.S."
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_31"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_31"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_31"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_31"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="04"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="F.M.D. MONO"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_41"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_41"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_41"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_41"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="05"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="F.M.D. TRY"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_51"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_51"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_51"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_51"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="06"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="G.T.V."
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_61"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_61"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_61"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_61"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="07"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="GOAT POX"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:id="@+id/a_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_71"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_71"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_71"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_71"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="08"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="P.P.R."
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_81"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_81"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_81"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_81"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="09"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="RAB. L.E.P."
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_91"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_91"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_91"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_91"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="10"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="RAB. H.E.P."
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/b_101"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/e_101"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/f_101"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="121"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/i_101"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:autofillHints="0"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="122"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="B"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="SUB TOTAL"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/b_111"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/e_111"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/f_111"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/i_111"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="A+B"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        android:text="GR. TOTAL"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/a_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/b_121"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/c_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/d_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/e_121"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/f_121"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/g_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/i_121"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/k_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/l_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/m_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/n_121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:padding="5dp"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
